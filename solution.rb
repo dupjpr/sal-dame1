@@ -1,41 +1,41 @@
-require"sinatra"
+# require"sinatra"
 
-get  '/' do
+# get  '/' do
     
-    unknown = "desconocido"
-    unless params[:nombre]
-        @nombre = unknown
-    else
+#     unknown = "desconocido"
+#     unless params[:nombre]
+#         @nombre = unknown
+#     else
 
-        @nombre = params[:nombre].empty? ? unknown : params[:nombre].capitalize
+#         @nombre = params[:nombre].empty? ? unknown : params[:nombre].capitalize
        
-    end
+#     end
   
-   erb :index
+#    erb :index
    
-end
+# end
 
 
 
 # require"sinatra"
 
 
-# get  '/' do
+get  '/' do
 
   
-#     unless params[:name]
-#         "Hola desconocido!"
-#     else
-#         if params[:name].length == 0
-#            "Hola desconocido!"
-#         else
+    unless params[:nombre]
+        "Hola desconocido!"
+    else
+        if params[:nombre].length == 0
+           "Hola desconocido!"
+        else
            
-#             "Hola #{params[:name]}!"
+            "<h1>Hola #{params[:nombre]}!</h1>"
           
-#         end
-#     end
+        end
+    end
    
    
-# end
+end
 
 
