@@ -7,12 +7,17 @@ get  '/' do
         "Hola desconocido!"
     else
         if params[:name] == ""
-            "Hola desconocido!"
+           "Hola desconocido!"
         else
-            "Hola #{params[:name]}"
+           
+            params[:name]
+          
         end
     end
+    # @tag1 = tag1
+    @name = params[:name]
    
+    erb :index
 
 end
 

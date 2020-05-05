@@ -1,7 +1,8 @@
-<%if @name %>
-    <h1> hola <%= @name %>! </h1>
+<%if @name == "" %>
+     <h1> Hola desconocido! </h1>
 <% else %>
-    <h1> Hola desconocido! </h1>
+    <h1> hola <%= @name %>! </h1>
+   
 <%end%>
 
 
