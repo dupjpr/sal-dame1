@@ -20,19 +20,15 @@
 require"sinatra"
 
 
-get  '/' do
+get  '/:nombre' do
 
   
     unless params[:nombre]
         "Hola desconocido!"
     else
-        if params[:nombre].length == 0
-           "Hola desconocido!"
-        else
-           
-            "<h1>Hola #{params[:nombre]}!</h1>"
-          
-        end
+
+        params[:nombre].empty? ? "Hola desconocido!" : "<h1>Hola #{params[:nombre].capitalize}!</h1>"
+    
     end
    
    
