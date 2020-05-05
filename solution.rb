@@ -7,7 +7,7 @@ get  '/' do
         @name = unknown
     else
 
-        @name = params[:name].empty? ? unknown : params[:name]
+        @name = params[:name].empty? ? unknown : params[:name].capitalize
        
     end
   
