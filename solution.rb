@@ -17,7 +17,7 @@
 
 
 
-# require"sinatra"
+require"sinatra"
 
 
 get  '/' do
