@@ -1,20 +1,16 @@
 require"sinatra"
 
-
 get  '/' do
-
-  
+    
+    unknown = "desconocido"
     unless params[:name]
-        "Hola desconocido!"
+        @name = unknown
     else
-        if params[:name].length == 0
-           "Hola desconocido!"
-        else
-            params[:name]
-        end
-    end
-   @name = params[:name]
 
+        @name = params[:name].empty? ? unknown : params[:name]
+       
+    end
+  
    erb :index
    
 end
