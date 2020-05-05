@@ -3,11 +3,11 @@ require"sinatra"
 get  '/' do
     
     unknown = "desconocido"
-    unless params[:name]
-        @name = unknown
+    unless params[:nombre]
+        @nombre = unknown
     else
 
-        @name = params[:name].empty? ? unknown : params[:name].capitalize
+        @nombre = params[:nombre].empty? ? unknown : params[:nombre].capitalize
        
     end
   
